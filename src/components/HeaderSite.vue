@@ -14,7 +14,7 @@
       </v-btn> |
     </div>
     <v-btn icon @click="searchChanger">
-      <v-icon>mdi-magnify</v-icon>
+      <v-icon id="search">mdi-magnify</v-icon>
     </v-btn>
     <input type="text" class="header__search" v-if="search === true" v-model="searchInput" @input="searchFilms">
   </v-toolbar>
@@ -65,6 +65,23 @@ export default {
 
 }
 
+@media print {
+
+  #search {
+    display: none;
+  }
+
+  .header__logo{
+    color:black !important;
+  }
+  
+  .login-btn {
+    display: none;
+  }
+  
+}
+
+
 .user-login {
   font-size: 20px;
 }
@@ -88,11 +105,5 @@ export default {
   background-color: rgb(255, 255, 255);
 }
 
-@media print {
-  .header__logo{
-    color:black;
-  }
-  
-}
 
 </style>

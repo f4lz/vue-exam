@@ -99,6 +99,25 @@ export default {
   }
 }
 
+@media print {
+  img {
+    display: none;
+  }
+  .act-btn {
+    display: none !important;
+  }
+  #btn {
+    display: none;
+  }
+  * {
+    color:black;
+  }
+  .login-btn {
+    display: none;
+  }
+  
+}
+
 .act-btn {
   display: flex;
   flex: 1 0 1;

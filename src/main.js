@@ -2,19 +2,23 @@ import Vue from 'vue'
 import App from './App.vue'
 import vuetify from './plugins/vuetify'
 import router from './router/index';
-import store from './store/index';
 import VueRouter from 'vue-router';
 import Vuelidate from 'vuelidate'
-import Vuex from 'vuex'
+import store from './store'
 
-Vue.use(Vuex)
 Vue.use(Vuelidate)
 Vue.use(VueRouter)
 Vue.config.productionTip = false
 
 new Vue({
-  store,
   router,
   vuetify,
+  store,
+  data: ({
+    authentificator: false,
+    login:'',
+    password:'',
+    email: '',
+  }),
   render: h => h(App)
 }).$mount('#app')

@@ -3,7 +3,7 @@ import MainPage from "@/pages/MainPage"
 import LoginForm from "@/components/LoginForm";
 import RegisterForm from "@/components/RegisterForm"
 import ErorHandler from "@/components/ErrorHandler"
-
+import SelectedPage from "@/pages/SelectedPage"
 
 export default new VueRouter({
   mode: 'history',
@@ -22,6 +22,10 @@ export default new VueRouter({
           path: '/register',
           name: 'register',
           component: RegisterForm   
+      },
+      {
+          path: '/:id',
+          component: SelectedPage   
       },
       {
         path: "*",

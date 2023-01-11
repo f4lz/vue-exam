@@ -1,10 +1,12 @@
-// import Vue from 'vue'
+import Vue from 'vue'
+import films from '@/store/modules/films'
 import Vuex from 'vuex'
-import films from './modules/films'
 
-export default new Vuex.Store ({
-  
+Vue.use(Vuex)
+
+export default new Vuex.Store({
+
   modules: {
-    films
-  },
+    films,
+  }
 })
